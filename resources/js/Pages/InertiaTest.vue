@@ -7,6 +7,7 @@ import { Link } from '@inertiajs/inertia-vue3';
     <a href="/">aタグ</a><br>
     <Link href="/">Link経由です</Link><br>
     <Link :href="route('inertia.index')">名前付きルート</Link>
+    <Link :href="route('inertia.show',{ id: 1 })">ルートパラメーター</Link>
 </template>
 
 <style scoped>
