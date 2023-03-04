@@ -1,11 +1,24 @@
 <script setup>
+import { Inertia } from '@inertiajs/inertia';
+import { Link } from "@inertiajs/inertia-vue3";
 defineProps({
-    id : String
+    id : String,
+    blog: Object
 })
+
+const deleteConfirm = (id) => {
+    console.log(id);
+    Inertia.delete(`/inertia/${id}`, {
+        onBefore:() => confirm('本当に削除しますか？')
+    })
+
+}
 </script>
 
 <template>
     <div>{{ id }}</div>
+    <div>{{ blog.title }}</div>
+    <button @click="deleteConfirm(blog.id)">削除</button>
 </template>
 
 <style scoped>
