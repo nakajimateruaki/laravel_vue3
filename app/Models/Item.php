@@ -15,4 +15,8 @@ class Item extends Model
         'price',
         'is_selling'
     ];
+
+    public static function create(array $array)
+    {
+    }
 }
