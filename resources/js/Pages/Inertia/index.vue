@@ -15,7 +15,6 @@ defineProps({
             本文: {{ blog.content }}
         </li>
     </ul>
-    ああああああああああああああああああ
 </template>
 
 <style scoped>
